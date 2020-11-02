@@ -1,5 +1,3 @@
-# Betaflight-para-novatos
-
 # Betaflight para novatos
 
 <img src="https://raw.githubusercontent.com/wiki/betaflight/betaflight/images/betaflight/bf_logo.png">
