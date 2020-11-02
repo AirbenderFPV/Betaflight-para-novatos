@@ -1,8 +1,10 @@
 # Betaflight-para-novatos
 
-# Betaflight v4.2.x
+# Betaflight para novatos
 
 <img src="https://raw.githubusercontent.com/wiki/betaflight/betaflight/images/betaflight/bf_logo.png">
+
+¿Eres nuevo en el mundo del FPV y no sabes lo que Betaflight puede hacer por ti?
 
 En este repositorio enseñare las cosas basicas que un novato tiene que saber de **Betaflight 4.2.x** así como las configuraciones recomendadas.  
 Recordad que para usar esta versión de Betaflight es necesario el **Betaflight Configurator version 10.7.0**.  
@@ -133,6 +135,9 @@ Activa permanentemente el Air Mode. Se puede deshabilitar aqui i condicionarlo e
 Permite sobreponer información sobre la imagen de la camara. Se configura en la pantalla de OSD.  
 - LED_STRIP:  
 Nos ayuda a controlar los leds del quad. Se pueden configurar en su pantalla.  
+- ESC TELEMETRY:  
+Habilita telemetria con los ESC. Consultar la pantalla de puertos. 
+
 
 ### Pantalla de Energía y Batería
 
@@ -140,11 +145,12 @@ Esta pantalla nos ayuda con la gestión de el voltage y la corriente de nuestro 
 
 <img src="https://raw.githubusercontent.com/AirbenderFPV/Betaflight-4.2.0/main/images/energia.PNG">
 
-- Valores por defecto, no editar   
+**Valores por defecto, no editar**  
 El voltaje mínimo de celda nunca debe bajar de 3.3v.  
 Si bajamos el voltaje de una celda por debajo de 3.3v podemos dañar la Lipo.   
 El voltaje de aviso por defecto se configura en 3.5v.  
-Este voltaje es el que determina en el OSD cuando aparece el aviso de _LOW VOLTAGE_  
+Este voltaje es el que determina en el OSD cuando aparece el aviso de _LOW VOLTAGE_    
+Si eres novato y no estas muy pendiente de la bateria mejor subir el voltaje de aviso a 3.6v.  
 
 Para calibrar el sensor de voltaje tendremos que usar un Multimetro para saber el voltaje real de nuestra bateria.   
 Posteriormente enchufar la LiPo y incrementar/disminuir el valor de **Escala** en el medidor de voltaje hasta que el valor del medidor de voltaje concuerde con el medido con el multimetro. 
@@ -165,10 +171,14 @@ Para mas información visita:
 
 (Tenemos que habilitar el modo experto en la parte superior derecha de Betaflight Configurator)
 
+Lo mejor es dejarlo por defecto para que nuestro quad en caso de perdida de señal se desarme.
+
 ### Pantalla de Ajustar PID
 
 #### PID  
 Esta pestaña nos ayuda a calibrar el PID de nuestro quad, si tienes poca experiencia es mejor dejar los ajustes por defecto.
+
+[PID] https://github.com/AirbenderFPV/PID-Betaflight-4.2
 
 #### TASAS  
 Esta pestaña nos ayuda a calibrar los "rates" o tasas de nuestro quad, en otras palabras la sensibilidad de nuestros sticks.   
@@ -184,7 +194,7 @@ Es muy recomendable en esta pestaña editar los valores del **Filtro Notch Diná
 Los valores recomdendados y provados por Joshua Bradwell son los que aparecen en la imagen.  
 Giro Filtro Notch Dinámico Ancho = 0  
 Giro Filtro Notch Dinámico Q =250   
-Giro Filtro Notch Dinámico Min =70   
+Giro Filtro Notch Dinámico Min =90   
 Giro Filtro Notch Dinámico Max =350   
 
 Además, los valores multiplicadores **Filtro Giro** y **Filtro D Term** se pueden mover un poco para filtrar menos la señal que enviamos a nuestro quad y tener una respuesta mas rapida. Hay que mover los dos por igual.  
